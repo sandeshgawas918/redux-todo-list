@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { markCompleted, removeTask, updateTask } from "../app/slice/todo/todoSlicer";
+import { markCompleted, removeTask, updateTask } from "../slice/todo/todoSlicer";
 import { ArrowDownLeftIcon, ArrowUturnLeftIcon, PencilIcon } from "@heroicons/react/24/solid";
 
 export const DisplayTodo = () => {
@@ -62,8 +62,8 @@ export const DisplayTodo = () => {
                                         <span> {todo.task}</span>
                                         {
                                             (todo.completed === false) && <PencilIcon onClick={() => { setEditHandler(todo.id, todo.task) }}
-                                            className=" text-teal-700 mx-5 size-6 shadow-2xl font-bold justify-end"
-                                        />
+                                                className=" text-teal-700 mx-5 size-6 shadow-2xl font-bold justify-end"
+                                            />
                                         }
                                     </div>
                             }

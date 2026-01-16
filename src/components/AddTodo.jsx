@@ -1,6 +1,6 @@
 "use client"
 
-import { addTask } from "@/app/slice/todo/todoSlicer";
+import { addTask } from "@/slice/todo/todoSlicer";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
