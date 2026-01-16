@@ -25,14 +25,14 @@ export const AddTodo = () => {
     return (
         <>
             <ToastContainer />
-            <h1 className="text-5xl text-blue-600 font-bold mt-10">Todo List</h1>
+            <h1 className="sm:text-5xl text-4xl text-blue-600 font-bold mt-10">Todo List</h1>
             <form onSubmit={onClickHandler} className=" w-full flex items-center justify-center gap-7">
                 <input value={input} onChange={(e) => { setinput(e.target.value) }}
-                    className="px-10 p-3 w-1/2 border text-gray-200"
+                    className="sm:px-10 sm:p-3 p-2 w-1/2 border text-gray-200 rounded-2xl"
                     placeholder="enter task here" />
                 <button
                     type="submit"
-                    className="bg-green-700 text-white p-5 rounded-2xl">
+                    className="bg-green-700 text-white sm:p-5 p-2 px-3 rounded-2xl">
                     Add Task
                 </button>
             </form>

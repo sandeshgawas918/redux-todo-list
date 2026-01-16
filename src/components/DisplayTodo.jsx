@@ -28,16 +28,16 @@ export const DisplayTodo = () => {
         <>
             {
                 todos && todos.map((todo) => (
-                    <div key={todo.id} className="w-1/2 rounded-2xl flex flex-row justify-around">
+                    <div key={todo.id} className="sm:w-1/2 w-full px-4 rounded-2xl  flex flex-row gap-3 sm:justify-around justify-between">
                         <div
-                            className={`text-white bg-amber-600 p-5 rounded-2xl text-xl font-semibold 
-                        w-4/5 flex flex-row items-center 
+                            className={`text-white bg-amber-600 sm:p-3 rounded-2xl sm:text-xl text-sm sm:font-semibold 
+                        sm:w-4/5 w-full  flex flex-row items-center 
                         ${todo.completed ? "line-through" : ""}`}
                         >
                             {
                                 (todo.id === edit)
                                     ?
-                                    <div className="flex flex-row items-center w-full">
+                                    <div className="flex flex-row px-3 items-center w-full">
                                         <input type="text"
                                             className=" w-full outline-none text-white"
                                             value={newinput}
@@ -49,8 +49,8 @@ export const DisplayTodo = () => {
                                     </div>
                                     :
                                     <div
-                                        className={`text-white bg-amber-600  rounded-2xl text-xl font-semibold 
-                            w-4/5 flex flex-row items-center 
+                                        className={`text-white bg-amber-600  rounded-2xl sm:text-xl text-sm sm:font-semibold 
+                            sm:w-4/5 flex flex-row items-center 
                             ${todo.completed ? "line-through" : ""}`}
                                     >
                                         <input type="checkbox"
@@ -73,12 +73,12 @@ export const DisplayTodo = () => {
                             (todo.id === edit) ?
                                 <button
                                     onClick={() => { setUpdateHandler2(todo.id, newinput) }}
-                                    className="bg-yellow-600 text-white p-5 rounded-2xl">
+                                    className="bg-yellow-600 text-white sm:p-5 p-2 px-3 rounded-2xl">
                                     Update
                                 </button> :
                                 <button
                                     onClick={() => { dispatch(removeTask(todo.id)) }}
-                                    className="bg-red-700 text-white p-5 rounded-2xl">
+                                    className="bg-red-700 text-white sm:p-5 p-2 px-3 rounded-2xl">
                                     Delete
                                 </button>
                         }
